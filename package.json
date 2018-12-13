@@ -1,0 +1,27 @@
+{
+  "name": "express-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "http": "0.0.0",
+    "multer": "^1.4.1",
+    "php-cgi": "^0.2.0",
+    "socket.io": "^2.1.1",
+    "sphp": "^0.6.2",
+    "sys": "0.0.1",
+    "ws": "^6.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}

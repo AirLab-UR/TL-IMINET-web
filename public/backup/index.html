@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sound Search by Vocal Imitation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.4.0/wavesurfer.min.js"></script>
+  </head>
+  <body>
+    <h1 align="center"> Sound Search by Vocal Imitation</h1>
+    <p>
+        This is a demo of the interface for Sound Search by Vocal Imitation web-based system.
+    </p>
+    <div id="controls">
+  	 <button id="recordButton">Record</button>
+  	 <button id="pauseButton" disabled>Pause</button>
+  	 <button id="stopButton" disabled>Stop</button>
+     <button id="predictButton" disabled>Predict</button>
+    </div>
+
+    <p style="font-weight:bold">Predictions</p>    
+    <p id="buttonCount">Returned sound recording list: <span id="posi-pair-gt"></span></p>
+
+    <div id="ProgressBar"></div>
+    <!-- <div id="formats">Format: start recording to see sample rate</div>
+  	<h3>Recording</h3>-->
+    <br>
+    <div id="Recording"></div>
+    
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+    <div id="recordingsList"></div>
+    <br>
+    <div id="waveform"></div>
+    <script>document.getElementById("waveform").style.display = "none";</script>
+    <script>
+    var wavesurfer = WaveSurfer.create({
+      container: '#waveform',
+      waveColor: 'grey',
+      progressColor: 'hsla(200, 100%, 30%, 0.5)',
+      cursorColor: '#333',
+      //barWidth: 3
+    });
+    </script>
+
+
+    <div id="buttonAppear"></div>
+    <!-- <div id="buttonPredict"></div> Newly added by Yichi-->
+
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+  	<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </body>
+</html>
