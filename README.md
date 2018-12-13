@@ -1,6 +1,3 @@
 # tmp_project
-It is a first try
-modification
-moximoxi
-hello hello
+Web developmenet for sound search by vocal imitation and pure text.
 
